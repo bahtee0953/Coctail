@@ -1,0 +1,5 @@
+export const COCTAIL_ALL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail'
+export const SEARCHBYNAME = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+export const COCTAILBYID = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
+export const FILTERBYALKO = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a='
+export const SEARCHBYING = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i='
