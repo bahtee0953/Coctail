@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { SEARCHBYNAME } from '../Config'
-
+import { SEARCHBYING } from '../Config'
+import Button from '@material-ui/core/Button'
+import '../../src/App.css'
 export default function IngridienScreen(props) {
     const [ing, setIng] = useState(null)
     useEffect(() => {
@@ -8,24 +9,25 @@ export default function IngridienScreen(props) {
         getIngredient(param)
     }, [])
     const getIngredient = async (prm) => {
-        let resp = await fetch(SEARCHBYNAME + prm)
+        let resp = await fetch(SEARCHBYING + prm)
         let req = await resp.json()
         setIng(req ? req.ingredients[0] : null)
     }
     return (
         <div>
-            <button onClick={
-                props.history.goBack
-            }>
+            <Button variant="contained" color="secondary" onClick={
+                props.history.goBack}>
                 {"<---"}
-            </button>
-            {ing ?
-                <div>
-                    <h1><i>{ing.strIngredient}</i></h1>
-                    <b><i>{ing.strDescription}</i></b>
-                </div>
-                : <h1>Error</h1>
-            }
+            </Button>
+            <div className='ingScreen'>
+                {ing ?
+                    <div className='ingBlock'>
+                        <h1 className='ingredient'><i>{ing.strIngredient}</i></h1>
+                        <b><i>{ing.strDescription}</i></b>
+                    </div>
+                    : <div class="loader"></div>
+                }
+            </div>
         </div>
     )
 }

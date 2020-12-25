@@ -1,7 +1,7 @@
 html,body{
   padding: 0;
   margin: 0;
-  background-color: black;
+  background:url("https://www.dropbox.com/s/2ct0i6kc61vp0bh/wall.jpg?raw=1") ;
   color: white;
 }
 .input{
@@ -37,11 +37,32 @@ html,body{
 .home{
   text-shadow: 0px 0px 10px red,
                 1px 1px 10px red;
-  font-size: 100px;
-  margin: 0 40%;
+  font-size: 90px;
+  margin: 0 30%;
   margin-bottom: 5%;
   color:white;
+   animation: neon .10s ease-in-out infinite alternate;
 }
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgb(202,228,225,0.92),
+    0 0 30px #FFA0A0,
+    0 0 12px #FF645F,
+    0 0 21px #FF4151,
+    0 0 34px #FF2D30,
+    0 0 54px #FF0000;
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 12px#FFD7E0,
+    0 0 22px #FFB4B4,
+    0 0 38px #FFAFAF,
+    0 0 60px#FF7C78;
+  }
+}
+
 .name{
   color:white;
 }
@@ -65,13 +86,14 @@ a{
 .infoIng{
   margin-top: 70px;
   display: flex; 
-  width: 50%;
-  justify-content: space-around;
+  width: 80%;
+  justify-content: space-between;
 }
 .detals{
   margin-left: 10%;
   display: flex;
   justify-content: space-around;
+  width: 70%;
 }
 .imgDetals{
   width: 400px;
@@ -84,4 +106,38 @@ a{
   justify-content: space-around;
   flex-wrap: wrap;
   margin:5% auto;
+}
+b {
+  color:white;
+}
+.ingredient{
+  color:white;
+}
+.ingBlock{
+  width: 75%;
+  padding: 30px;
+  border: 1px solid red;
+  box-shadow: 0px 0px 23px white;
+  margin: 5% auto;
+}
+.text{
+  position: relative;
+  left: 5%;
+}
+.loader {
+    border: 16px solid #f3f2f2; 
+    border-top: 16px solid red; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 5% auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+p{
+  width: 500px;
 }

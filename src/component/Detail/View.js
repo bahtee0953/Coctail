@@ -3,7 +3,7 @@ import '../../../src/App.css'
 import { Link } from 'react-router-dom'
 export default function View(props) {
     return (
-        <div>
+        <div className='ingBlock'>
             {props.info &&
                 <div className='detals'>
                     <img src={props.info.strDrinkThumb} className='imgDetals' />
@@ -16,11 +16,11 @@ export default function View(props) {
                             <div>
                                 <b>Ingradients</b>
                                 <ol>
-                                    <Link to={'/ingradients/' + props.info.strIngredient1}><li className='ingradient'>{props.info.strIngredient1}</li></Link>
-                                    <Link to={'/ingradients/' + props.info.strIngredient2}><li className='ingradient'>{props.info.strIngredient2}</li></Link>
-                                    <Link to={'/ingradients/' + props.info.strIngredient3}><li className='ingradient'>{props.info.strIngredient3}</li></Link>
-                                    <Link to={'/ingradients/' + props.info.strIngredient4}><li className='ingradient'>{props.info.strIngredient4}</li></Link>
-                                    <Link to={'/ingradients/' + props.info.strIngredient5}><li className='ingradient'>{props.info.strIngredient5}</li></Link>
+                                    <Link to={'/ingridient/' + props.info.strIngredient1}><li className='ingradient'>{props.info.strIngredient1}</li></Link>
+                                    <Link to={'/ingridient/' + props.info.strIngredient2}><li className='ingradient'>{props.info.strIngredient2}</li></Link>
+                                    <Link to={'/ingridient/' + props.info.strIngredient3}><li className='ingradient'>{props.info.strIngredient3}</li></Link>
+                                    <Link to={'/ingridient/' + props.info.strIngredient4}><li className='ingradient'>{props.info.strIngredient4}</li></Link>
+                                    <Link to={'/ingridient/' + props.info.strIngredient5}><li className='ingradient'>{props.info.strIngredient5}</li></Link>
                                 </ol >
                             </div>
                             <div>

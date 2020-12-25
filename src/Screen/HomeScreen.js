@@ -36,7 +36,7 @@ export default function HomeScreen() {
     }
     return (
         <div>
-            <h1 className='home'>Home</h1>
+            <h1 className='home'>Coctail Bar</h1>
             <SearcBar
                 getCoctailsByName={getCoctailsByName}
                 filterByAlc={filterByAlc}

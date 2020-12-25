@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import View from '../component/Detail/View'
-import { COCTAILBYID } from '../Config'
+import { COCTAILBYID } from '../Config';
+import Button from '@material-ui/core/Button';
 
 export default function DetailScreen(props) {
     const [fullInfo, setfullInfo] = useState(null)
@@ -16,12 +17,12 @@ export default function DetailScreen(props) {
     }
     return (
         <div>
-            <button className='back' onClick={
+            <Button variant="contained" color="secondary" onClick={
                 props.history.goBack
             }>
                 {'<---'}
-            </button>
-            <View
+            </Button>
+            <View 
                 info={fullInfo}
             />
         </div>

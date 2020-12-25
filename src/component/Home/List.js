@@ -15,7 +15,7 @@ export default function List(props) {
                         </Link>
                     )
                 })
-                : <h5>Loading...</h5>
+                : <div class="loader"></div>
             }
         </div>
     )
